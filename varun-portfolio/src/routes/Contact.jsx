@@ -1,6 +1,60 @@
+import { useRef } from "react";
+import emailjs from '@emailjs/browser'
+
+
 const Contact = () => {
+  const nameElement = useRef("");
+  const emailElement = useRef("");
+  const phoneElement = useRef("");
+  const serviceElement = useRef("");
+  const siteElement = useRef("");
+  const timeElement = useRef("");
+  const budgetElement = useRef("");
+  const informationElement = useRef("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const name = nameElement.current.value;
+    const email = emailElement.current.value;
+    const phone = phoneElement.current.value;
+    const service = serviceElement.current.value;
+    const site = siteElement.current.value;
+    const time = timeElement.current.value;
+    const budget = budgetElement.current.value;
+    const information = informationElement.current.value;
+
+    const formData = {
+      name,
+      email,
+      phone,
+      service,
+      site,
+      time,
+      budget,
+      information,
+    };
+
+    emailjs.sendForm("service_yldfh7j", "template_0oswapi", formData ,"wRvzwkTevv6UTnjLk" ).then(
+      function (response) {
+        console.log("SUCCESS!", response.status, response.text);
+      },
+      function (error) {
+        console.log("FAILED...", error);
+      }
+    );
+
+    nameElement.current.value = "";
+    emailElement.current.value = "";
+    phoneElement.current.value = "";
+    serviceElement.current.value = "";
+    siteElement.current.value = "";
+    timeElement.current.value = "";
+    budgetElement.current.value = "";
+    informationElement.current.value = "";
+  };
+
   return (
-    <form>
+    <form onSubmit={handleSubmit} id="myForm">
       <div className="mb-3">
         <label htmlFor="exampleInputEmail1" className="form-label">
           Name
@@ -11,6 +65,8 @@ const Contact = () => {
           id="exampleInputEmail1"
           aria-describedby="emailHelp"
           placeholder="Enter your name here..."
+          ref={nameElement}
+          name="name"
         />
       </div>
       <div className="mb-3">
@@ -23,6 +79,8 @@ const Contact = () => {
           id="exampleInputEmail1"
           aria-describedby="emailHelp"
           placeholder="Enter your email here..."
+          ref={emailElement}
+          name="email"
         />
       </div>
       <div className="mb-3">
@@ -34,6 +92,8 @@ const Contact = () => {
           className="form-control"
           id="exampleInputPassword1"
           placeholder="Enter your phone number here..."
+          ref={phoneElement}
+          name="phone"
         />
       </div>
       <div className="mb-3">
@@ -46,8 +106,11 @@ const Contact = () => {
           type="checkbox"
           className="form-check-input"
           id="exampleCheck1"
+          value="web-design"
+          ref={serviceElement}
+          name="service"
         />
-        <label className="form-check-label" for="exampleCheck1">
+        <label className="form-check-label" htmlFor="exampleCheck1">
           Web design.
         </label>
       </div>
@@ -56,8 +119,11 @@ const Contact = () => {
           type="checkbox"
           className="form-check-input"
           id="exampleCheck1"
+          ref={serviceElement}
+          value="web-development"
+          name="service"
         />
-        <label className="form-check-label" for="exampleCheck1">
+        <label className="form-check-label" htmlFor="exampleCheck1">
           Web developement.
         </label>
       </div>
@@ -71,6 +137,8 @@ const Contact = () => {
           id="exampleInputEmail1"
           aria-describedby="emailHelp"
           placeholder="Enter your Website.."
+          ref={siteElement}
+          name="site"
         />
       </div>
       <div className="mb-3">
@@ -83,11 +151,18 @@ const Contact = () => {
           id="exampleInputEmail1"
           aria-describedby="emailHelp"
           placeholder="Please provide days weeks or months.."
+          ref={timeElement}
+          name="time"
         />
       </div>
       <h6>Approximat Budget.</h6>
       <div className="mb-3 mt-3 ">
-        <select name="budget" id="budget" className="form-control">
+        <select
+          name="budget"
+          id="budget"
+          className="form-control"
+          ref={budgetElement}
+        >
           <option value="prefer not to say">Prefer not to say.</option>
           <option value="Under 1000">Under ₹ 1000 </option>
           <option value="1000-3000">₹ 1000 - ₹ 3000 </option>
@@ -98,13 +173,17 @@ const Contact = () => {
       </div>
 
       <h6>Project Information or Enquiry.</h6>
-      <div class="form-floating mb-3">
+      <div className="form-floating mb-3">
         <textarea
-          class="form-control"
+          className="form-control"
           placeholder="Leave a comment here"
           id="floatingTextarea"
+          ref={informationElement}
+          name="information"
         ></textarea>
-        <label for="floatingTextarea">Please provide as much information about your project as you can.</label>
+        <label htmlFor="floatingTextarea">
+          Please provide as much information about your project as you can.
+        </label>
       </div>
       <button type="submit" className="btn btn-primary">
         Submit
