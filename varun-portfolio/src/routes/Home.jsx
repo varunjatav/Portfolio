@@ -3,12 +3,12 @@ import React from "react";
 const Home = () => {
   return (
     <main>
-      <h1 className="visually-hidden">Heroes examples</h1>
+    
 
       <div className="px-4 py-5 my-5 text-center">
         <img
           className="d-block mx-auto mb-4"
-          src="public/personal_photo.jpg"
+          src="/personal_photo.jpg"
           alt=""
           width="250px"
           height="250px"
@@ -22,10 +22,11 @@ const Home = () => {
            Frontend Web Developer
           </p>
           <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <a href="/VARUN JATAV.pdf" download="/VARUN JATAV.pdf">
             <button type="button" className="btn btn-primary btn-lg px-4 gap-3">
               Download Resume
             </button>
-           
+            </a>
           </div>
         </div>
       </div>
