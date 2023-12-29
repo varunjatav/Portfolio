@@ -9,7 +9,12 @@ const Projects = () => {
         <div className="col">
           <div
             className="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-            style={{ backgroundImage: "url('/black-pearl.png')" }}
+            style={{
+              backgroundImage: "url('/black-pearl.png')",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+            }}
           >
             <div className="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
               {/* <h3 className="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Short title, long jacket</h3> */}
@@ -23,7 +28,10 @@ const Projects = () => {
                     <small>Github</small>
                   </li>
                 </a>
-                <a href="https://startling-tulumba-8a76b2.netlify.app/"  className="text-decoration-none">
+                <a
+                  href="https://startling-tulumba-8a76b2.netlify.app/"
+                  className="text-decoration-none"
+                >
                   <li className="d-flex align-items-center text-white gap-2">
                     <BiLogoNetlify />
                     <small>Deploy</small>
@@ -37,34 +45,29 @@ const Projects = () => {
         <div className="col">
           <div
             className="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-            style={{ backgroundImage: "url('unsplash-photo-3.jpg')" }}
+            style={{
+              backgroundImage: "url('/weather-app.png')",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+            }}
           >
             <div className="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-              <h3 className="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
-                Much longer title that wraps to multiple lines
-              </h3>
               <ul className="d-flex list-unstyled mt-auto">
-                <li className="me-auto">
-                  <img
-                    src="https://github.com/twbs.png"
-                    alt="Bootstrap"
-                    width="32"
-                    height="32"
-                    className="rounded-circle border border-white"
-                  />
+                <a href="https://github.com/varunjatav/weather-app"
+                 className="text-decoration-none">
+                <li className="d-flex align-items-center text-white me-3">
+                  <FaGithub />
+                  <small>Github</small>
                 </li>
-                <li className="d-flex align-items-center me-3">
-                  <svg className="bi me-2" width="1em" height="1em">
-                    <use xlink:href="#geo-fill"></use>
-                  </svg>
-                  <small>Pakistan</small>
+                </a>
+                <a href="https://658ea8986ca12d9c5896be81--incredible-haupia-446af4.netlify.app/"
+                 className="text-decoration-none">
+                <li className="d-flex align-items-center text-white">
+                  <BiLogoNetlify />
+                  <small>Deploy</small>
                 </li>
-                <li className="d-flex align-items-center">
-                  <svg className="bi me-2" width="1em" height="1em">
-                    <use xlink:href="#calendar3"></use>
-                  </svg>
-                  <small>4d</small>
-                </li>
+                </a>
               </ul>
             </div>
           </div>
