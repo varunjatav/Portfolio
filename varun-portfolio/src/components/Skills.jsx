@@ -23,7 +23,7 @@ const Skills = () => {
 
       <div  className="col d-flex flex-column text-center">
         <img src="/redux.png" alt="redux" width="200px" height="200px" className="m-auto"/>
-        <h1>Redux</h1>
+        <h1>Redux Toolkit</h1>
       </div>
 
       <div  className="col d-flex flex-column text-center">
@@ -39,6 +39,23 @@ const Skills = () => {
       <div  className="col d-flex flex-column text-center">
         <img src="/npm.png" alt="npm" width="200px" height="200px" className="m-auto"/>
         <h1>NPM</h1>
+      </div>
+
+      <div  className="col d-flex flex-column text-center">
+        <img src="/typescript-logo.webp" alt="npm" width="200px" height="200px" className="m-auto"/>
+        <h1>Typescript</h1>
+      </div>
+      <div  className="col d-flex flex-column text-center">
+        <img src="/git.png" alt="npm" width="200px" height="200px" className="m-auto"/>
+        <h1>Git</h1>
+      </div>
+      <div  className="col d-flex flex-column text-center">
+        <img src="/github.png" alt="npm" width="200px" height="200px" className="m-auto"/>
+        <h1>Github</h1>
+      </div>
+      <div  className="col d-flex flex-column text-center">
+        <img src="/Java.png" alt="npm" width="200px" height="200px" className="m-auto"/>
+        <h1>Java</h1>
       </div>
     </div>
   );

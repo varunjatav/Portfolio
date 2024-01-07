@@ -9,6 +9,7 @@ import Home from "./routes/Home.jsx";
 import About from "./routes/About.jsx";
 import Projects from "./routes/Projects.jsx";
 import Contact from "./routes/Contact.jsx";
+import Certificates from "./routes/Certificates.jsx";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "contact",
         element: <Contact />,
+      },
+      {
+        path: "certificates",
+        element: <Certificates />,
       },
     ],
   },
