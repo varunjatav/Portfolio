@@ -5,13 +5,13 @@ const projects = [
   {
     id: 1,
     img: "/black-pearl.png",
-    title: "Weather app",
+    title: "Black Pearl",
     content:
       "Black Pearl is an Ecommerce Website where you can find a variety of jewelleries of Gold, Platinum, Solitiare, Diamond, Silver, etc and more",
     github: "https://github.com/nikhildeora/black-pearl",
     netlify:
       "https://startling-tulumba-8a76b2.netlify.app/",
-    techStack: ["/html.png", "/css.png" , "/javascript.png", "/react.png", "/bootstrap.png"],
+    techStack: ["/html.png", "/css.png" , "/javascript.png", "/react.png", "/bootstrap.png", "/firebase.png"],
   },
   {
     id: 2,
@@ -26,13 +26,13 @@ const projects = [
   },
   {
     id: 3,
-    img: "/weather-app.png",
-    title: "Weather app",
+    img: "/e-commerce.png",
+    title: "E commerce App",
     content:
-      "A React weather app where you can check weathers of cities and countries",
-    github: "https://github.com/varunjatav/weather-app",
+      "An E commerce app to find electronics and household products",
+    github: "https://github.com/varunjatav/e-coomerce",
     netlify:
-      "https://658ea8986ca12d9c5896be81--incredible-haupia-446af4.netlify.app/",
+      "https://magnificent-faloodeh-17d228.netlify.app/",
     techStack: ["/html.png", "/css.png", "/react.png", "/bootstrap.png"],
   },
 ];
@@ -75,6 +75,7 @@ const Projects = () => {
                 <div className="d-flex flex-wrap align-items-center justify-content-between pt-4">
                   {single.techStack.map((tech) => (
                     <img
+                    key={tech}
                       src={tech}
                       alt="javascript"
                       width="50px"
