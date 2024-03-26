@@ -42,8 +42,23 @@ const Skills = () => {
       </div>
 
       <div  className="col d-flex flex-column text-center skill-container">
-        <img src="/typescript-logo.webp" alt="npm" width="200px" height="200px" className="m-auto"/>
+        <img src="/typescript-logo.webp" alt="typescript" width="200px" height="200px" className="m-auto"/>
         <h1>Typescript</h1>
+      </div>
+
+      <div  className="col d-flex flex-column text-center skill-container">
+        <img src="/node-js-logo.webp" alt="nodeJS" width="200px" height="200px" className="m-auto"/>
+        <h1>Node JS</h1>
+      </div>
+
+      <div  className="col d-flex flex-column text-center skill-container">
+        <img src="/expressjs_logo_icon.png" alt="expressJS" width="200px" height="200px" className="m-auto"/>
+        <h1>Express JS</h1>
+      </div>
+
+      <div  className="col d-flex flex-column text-center skill-container">
+        <img src="/Mongodb.png" alt="mongo db" width="200px" height="200px" className="m-auto"/>
+        <h1>Mongo DB</h1>
       </div>
       <div  className="col d-flex flex-column text-center skill-container">
         <img src="/git.png" alt="npm" width="200px" height="200px" className="m-auto"/>
